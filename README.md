@@ -22,14 +22,14 @@ mol2_xyz () {
 }
 
 xyz2QC () {
-    docker run --platform linux/amd64 -it --rm -v "$(pwd)":/source -v /path/to/molclus_1.9.9.9_Linux:/opt/molclus molclus:latest sh -c xyz2QC $@ }”
+    docker run --platform linux/amd64 -it --rm -v "$(pwd)":/source -v /path/to/molclus_1.9.9.9_Linux:/opt/molclus molclus:latest sh -c "xyz2QC $@"
 }
 
 gentor () {
-    docker run --platform linux/amd64 -it --rm -v "$(pwd)":/source -v /path/to/molclus_1.9.9.9_Linux:/opt/molclus molclus:latest sh -c gentor $@
+    docker run --platform linux/amd64 -it --rm -v "$(pwd)":/source -v /path/to/molclus_1.9.9.9_Linux:/opt/molclus molclus:latest sh -c "gentor $@"
 }
 
 genmer () {
-    docker run --platform linux/amd64 -it --rm -v "$(pwd)":/source -v /path/to/molclus_1.9.9.9_Linux:/opt/molclus molclus:latest sh -c genmer $@
+    docker run --platform linux/amd64 -it --rm -v "$(pwd)":/source -v /path/to/molclus_1.9.9.9_Linux:/opt/molclus molclus:latest sh -c "genmer $@"
 }
 ```
